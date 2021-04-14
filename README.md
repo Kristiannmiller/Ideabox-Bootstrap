@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <h3 align="center">CSS Playground</h3>
+  <h3 align="center">Ideabox Bootstrap</h3>
   <p align="center">
     Exploration Space for Bootstrap
     <br />
