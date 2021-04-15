@@ -5,6 +5,11 @@ import React, { useState, useEffect, useMemo } from 'react';
 
 function App() {
   const [currentIdeas, setCurrentIdeas] = useState([]);
+
+  const addIdea = (idea) => {
+    setCurrentIdeas([...currentIdeas, idea])
+  }
+
   return (
     <div className="p-5 d-flex flex-column">
       <div className="row">
