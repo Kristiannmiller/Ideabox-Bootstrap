@@ -1,7 +1,10 @@
 import './App.scss';
 import IdeaForm from '../IdeaForm/IdeaForm';
+import Ideas from '../Ideas/Ideas';
+import React, { useState, useEffect, useMemo } from 'react';
 
 function App() {
+  const [currentIdeas, setCurrentIdeas] = useState([]);
   return (
     <div className="p-5 d-flex flex-column">
       <div className="row">
@@ -9,6 +12,8 @@ function App() {
       </div>
       <IdeaForm
         addIdea= {addIdea} />
+      <Ideas
+        ideas= {currentIdeas}
     </div>
   );
 }
