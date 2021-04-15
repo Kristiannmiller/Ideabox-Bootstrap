@@ -10,6 +10,13 @@ function App() {
     setCurrentIdeas([...currentIdeas, idea])
   }
 
+  const faveIdea = (id) => {
+    let otherIdeas = currentIdeas.filter(idea => idea.id !== id)
+    let ideaToChange = currentIdeas.find(idea => idea.id === id)
+    ideaToChange.fave = !ideaToChange.fave
+    setCurrentIdeas([...otherIdeas, ideaToChange])
+  }
+
   return (
     <div className="p-5 d-flex flex-column">
       <div className="row">
@@ -19,6 +26,7 @@ function App() {
         addIdea= {addIdea} />
       <Ideas
         ideas= {currentIdeas}
+        faveIdea= {faveIdea}
     </div>
   );
 }
