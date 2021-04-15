@@ -1,4 +1,5 @@
 import './App.scss';
+import IdeaForm from '../IdeaForm/IdeaForm';
 
 function App() {
   return (
@@ -6,6 +7,8 @@ function App() {
       <div className="row">
         <h1 class="p-2 col-sm-12">What a Lovely Idea!</h1>
       </div>
+      <IdeaForm
+        addIdea= {addIdea} />
     </div>
   );
 }
