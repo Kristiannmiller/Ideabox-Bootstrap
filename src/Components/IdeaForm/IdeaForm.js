@@ -1,5 +1,5 @@
 import './IdeaForm.scss';
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState } from 'react';
 
 
 function IdeaForm({addIdea}) {
