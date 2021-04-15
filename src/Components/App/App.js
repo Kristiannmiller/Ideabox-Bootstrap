@@ -17,6 +17,11 @@ function App() {
     setCurrentIdeas([...otherIdeas, ideaToChange])
   }
 
+  const deleteIdea = (id) => {
+    let otherIdeas = currentIdeas.filter(idea => idea.id !== id)
+    setCurrentIdeas([...otherIdeas])
+  }
+
   return (
     <div className="p-5 d-flex flex-column">
       <div className="row">
@@ -27,6 +32,7 @@ function App() {
       <Ideas
         ideas= {currentIdeas}
         faveIdea= {faveIdea}
+        deleteIdea={deleteIdea} />
     </div>
   );
 }
