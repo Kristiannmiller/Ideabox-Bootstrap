@@ -10,6 +10,17 @@ function App() {
     setCurrentIdeas([...currentIdeas, idea])
   }
 
+  const alphabetize = (ideas) => {
+    return ideas.sort((a, b) => {
+      if(a.title < b.title) {
+        return -1
+      }
+      if(a.title > b.title) {
+        return 1
+      }
+    })
+  }
+
   const faveIdea = (id) => {
     let otherIdeas = currentIdeas.filter(idea => idea.id !== id)
     let ideaToChange = currentIdeas.find(idea => idea.id === id)
@@ -33,7 +44,7 @@ function App() {
       </div>
       <div className="container-fluid">
         <Ideas
-          ideas= {currentIdeas}
+          ideas= {alphabetize(currentIdeas)}
           faveIdea= {faveIdea}
           deleteIdea={deleteIdea} />
       </div>
