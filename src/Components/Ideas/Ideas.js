@@ -21,7 +21,7 @@ function Ideas({ideas, faveIdea, deleteIdea}) {
   }
 
   return (
-    <div className="d-flex row-lg-12">
+    <div className="row b-2 py-4">
       {displayIdeas()}
     </div>
   );

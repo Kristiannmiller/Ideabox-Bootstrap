@@ -30,15 +30,17 @@ function IdeaForm({addIdea}) {
 
 
   return (
-    <div className="row-lg-12 align-center justify-left">
+    <div className="row-lg-12 align-center">
       <form onSubmit={event => submitIdea(event)}>
         <div className="row p-2 justify-content-center">
-          <input required value={ideaTitle} onChange={event => setIdeaTitle(event.target.value)} placeholder="Idea Title" className="col-sm-3 border-dark rounded" type="text"/>
+          <input required value={ideaTitle} onChange={event => setIdeaTitle(event.target.value)} placeholder="Idea Title" className="col-lg-5 col-md-6 col-sm-12 border-dark rounded" type="text"/>
         </div>
         <div className="row p-2 justify-content-center">
-          <textarea required value={ideaDetails} style={{resize: "none", height: "100px", border: "2px black solid", rows: "90", cols:"50"}} onChange={event => setIdeaDetails(event.target.value)} placeholder="Idea Details" className="col-sm-4 border-dark rounded" type="text"/>
+          <textarea required value={ideaDetails} style={{resize: "none", height: "100px", border: "2px black solid", rows: "90", cols:"50"}} onChange={event => setIdeaDetails(event.target.value)} placeholder="Idea Details" className="col-lg-8 col-md-10 col-sm-12 border-dark rounded" type="text"/>
         </div>
-        <button className="m-2 btn-primary col-sm-3">submit</button>
+        <div className="row p-2 justify-content-center">
+          <button className="col-lg-2 col-md-4 col-sm-12 m-2 btn-primary col-sm-3">submit</button>
+        </div>
       </form>
     </div>
   );
