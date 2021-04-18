@@ -27,12 +27,16 @@ function App() {
       <div className="row">
         <h1 className="p-2 col-sm-12">What a Lovely Idea!</h1>
       </div>
-      <IdeaForm
-        addIdea= {addIdea} />
-      <Ideas
-        ideas= {currentIdeas}
-        faveIdea= {faveIdea}
-        deleteIdea={deleteIdea} />
+      <div className="container">
+        <IdeaForm
+          addIdea= {addIdea} />
+      </div>
+      <div className="container-fluid">
+        <Ideas
+          ideas= {currentIdeas}
+          faveIdea= {faveIdea}
+          deleteIdea={deleteIdea} />
+      </div>
     </div>
   );
 }
