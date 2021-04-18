@@ -7,8 +7,10 @@ function Idea({title, details, id, fave, faveIdea, deleteIdea}) {
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
             <p className="card-text">{details}</p>
-            <button className="btn btn-outline-primary m-2 w-20" onClick={() => deleteIdea(id)}>X</button>
-            {fave ? <button className="btn btn-primary m-2" onClick={() => faveIdea(id)}>♥</button> : <button className="btn btn-outline-primary m-2" onClick={() => faveIdea(id)}>♡</button>}
+            <div className="row justify-content-center">
+              <button className="btn btn-outline-primary col-sm-3 m-2 w-50" onClick={() => deleteIdea(id)}>X</button>
+              {fave ? <button className="btn btn-primary col-sm-3 m-2 w-50" onClick={() => faveIdea(id)}>♥</button> : <button className="btn btn-outline-primary col-sm-3 m-2 w-50" onClick={() => faveIdea(id)}>♡</button>}
+            </div>
         </div>
       </div>
     </div>
